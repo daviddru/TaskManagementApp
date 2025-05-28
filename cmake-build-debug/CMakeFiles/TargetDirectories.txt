@@ -1,0 +1,5 @@
+/Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/cmake-build-debug/CMakeFiles/TaskManagement.dir
+/Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/cmake-build-debug/CMakeFiles/TaskManagement_autogen_timestamp_deps.dir
+/Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/cmake-build-debug/CMakeFiles/TaskManagement_autogen.dir

@@ -1,0 +1,2 @@
+set(__QT_DEPLOY_TARGET_TaskManagement_FILE /Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/cmake-build-debug/TaskManagement)
+set(__QT_DEPLOY_TARGET_TaskManagement_TYPE EXECUTABLE)
