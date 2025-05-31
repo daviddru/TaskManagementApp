@@ -22,6 +22,7 @@ private:
     QPushButton* addButton;
     QListWidget* taskList;
     QPushButton* removeButton;
+    QPushButton* updateButton;
 
     void setupUI();
     void connectSignals();
@@ -31,6 +32,7 @@ private slots:
     void onAddTask();
     void onTaskDoubleClicked(QListWidgetItem* item);
     void onRemoveTask();
+    void onUpdateTask();
 
 public:
     MainWindow(TaskController& controller, QWidget* parent = nullptr);

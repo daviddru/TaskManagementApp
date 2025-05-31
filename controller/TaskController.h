@@ -16,6 +16,7 @@ public:
 
     void addTask(const QString& description);
     void removeTask(int index);
+    void updateTask(int index, const QString& description);
     void toggleCompletion(int index);
     const std::vector<Task>& getAllTasks() const;
 };

@@ -12,6 +12,10 @@ void TaskController::removeTask(int index) {
     repo.removeTask(index);
 }
 
+void TaskController::updateTask(int index, const QString& description) {
+    repo.updateTask(index, description);
+}
+
 void TaskController::toggleCompletion(int index) {
     repo.toggleCompletion(index);
 }

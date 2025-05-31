@@ -4,6 +4,7 @@
 
 #include "MainWindow.h"
 #include <QDebug>
+#include <QMessageBox>
 
 MainWindow::MainWindow(TaskController& controller, QWidget *parent)
     : QMainWindow(parent), controller(controller) {
@@ -19,20 +20,26 @@ void MainWindow::setupUI() {
     // Layouts
     QVBoxLayout* mainLayout = new QVBoxLayout();
     QHBoxLayout* inputLayout = new QHBoxLayout();
+    QHBoxLayout* actionsLayout = new QHBoxLayout();
 
     // Widgets
     taskInput = new QLineEdit(this);
     addButton = new QPushButton("Add task", this);
     taskList = new QListWidget(this);
     removeButton = new QPushButton("Remove task", this);
+    updateButton = new QPushButton("Update task", this);
 
     // Input Layout
     inputLayout->addWidget(taskInput);
     inputLayout->addWidget(addButton);
-    inputLayout->addWidget(removeButton);
+
+    // Actions Layout
+    actionsLayout->addWidget(removeButton);
+    actionsLayout->addWidget(updateButton);
 
     // Main Layout
     mainLayout->addLayout(inputLayout);
+    mainLayout->addLayout(actionsLayout);
     mainLayout->addWidget(taskList);
 
     central->setLayout(mainLayout);
@@ -42,6 +49,7 @@ void MainWindow::connectSignals() {
     connect(addButton, &QPushButton::clicked, this, &MainWindow::onAddTask);
     connect(taskList, &QListWidget::itemDoubleClicked, this, &MainWindow::onTaskDoubleClicked);
     connect(removeButton, &QPushButton::clicked, this, &MainWindow::onRemoveTask);
+    connect(updateButton, &QPushButton::clicked, this, &MainWindow::onUpdateTask);
 }
 
 void MainWindow::refreshUI() {
@@ -85,9 +93,26 @@ void MainWindow::onRemoveTask() {
     QListWidgetItem* item = taskList->currentItem();
 
     if (!item) {
+        QMessageBox::warning(this, "Removing task", "Task not found!");
         return;
     }
 
     controller.removeTask(item->data(Qt::UserRole).toInt());
     refreshUI();
+}
+
+void MainWindow::onUpdateTask() {
+    QListWidgetItem* item = taskList->currentItem();
+
+    if (!item) {
+        QMessageBox::warning(this, "Update task", "Task not found!");
+        return;
+    }
+
+    QString text = taskInput->text();
+    if (!text.isEmpty()) {
+        controller.updateTask(item->data(Qt::UserRole).toInt(), text);
+        taskInput->clear();
+        refreshUI();
+    }
 }
