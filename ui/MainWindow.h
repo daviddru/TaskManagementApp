@@ -21,6 +21,7 @@ private:
     QLineEdit* taskInput;
     QPushButton* addButton;
     QListWidget* taskList;
+    QPushButton* removeButton;
 
     void setupUI();
     void connectSignals();
@@ -29,6 +30,7 @@ private:
 private slots:
     void onAddTask();
     void onTaskDoubleClicked(QListWidgetItem* item);
+    void onRemoveTask();
 
 public:
     MainWindow(TaskController& controller, QWidget* parent = nullptr);

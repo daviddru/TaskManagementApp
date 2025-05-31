@@ -24,10 +24,12 @@ void MainWindow::setupUI() {
     taskInput = new QLineEdit(this);
     addButton = new QPushButton("Add task", this);
     taskList = new QListWidget(this);
+    removeButton = new QPushButton("Remove task", this);
 
     // Input Layout
     inputLayout->addWidget(taskInput);
     inputLayout->addWidget(addButton);
+    inputLayout->addWidget(removeButton);
 
     // Main Layout
     mainLayout->addLayout(inputLayout);
@@ -39,6 +41,7 @@ void MainWindow::setupUI() {
 void MainWindow::connectSignals() {
     connect(addButton, &QPushButton::clicked, this, &MainWindow::onAddTask);
     connect(taskList, &QListWidget::itemDoubleClicked, this, &MainWindow::onTaskDoubleClicked);
+    connect(removeButton, &QPushButton::clicked, this, &MainWindow::onRemoveTask);
 }
 
 void MainWindow::refreshUI() {
@@ -75,5 +78,16 @@ void MainWindow::onTaskDoubleClicked(QListWidgetItem* item) {
     int index = item->data(Qt::UserRole).toInt();
 
     controller.toggleCompletion(index);
+    refreshUI();
+}
+
+void MainWindow::onRemoveTask() {
+    QListWidgetItem* item = taskList->currentItem();
+
+    if (!item) {
+        return;
+    }
+
+    controller.removeTask(item->data(Qt::UserRole).toInt());
     refreshUI();
 }
