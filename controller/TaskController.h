@@ -6,13 +6,16 @@
 #define TASKCONTROLLER_H
 
 #include "../repository/CSVTaskRepository.h"
+#include "../repository/JSONTaskRepository.h"
 
 class TaskController {
 private:
-    CSVTaskRepository& repo;
+    JSONTaskRepository& repo;
+    // CSVTaskRepository& repo;
 
 public:
-    TaskController(CSVTaskRepository& repo) : repo(repo) {}
+    TaskController(JSONTaskRepository& repo) : repo(repo) {}
+    // TaskController(CSVTaskRepository& repo) : repo(repo) {}
 
     void addTask(const QString& description);
     void removeTask(int index);

@@ -956,6 +956,8 @@ TaskManagement_autogen/timestamp: \
 	/Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/main.cpp \
 	/Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/repository/CSVTaskRepository.cpp \
 	/Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/repository/CSVTaskRepository.h \
+	/Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/repository/JSONTaskRepository.cpp \
+	/Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/repository/JSONTaskRepository.h \
 	/Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/repository/TaskRepository.h \
 	/Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/ui/mainwindow.cpp \
 	/Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/ui/mainwindow.h \

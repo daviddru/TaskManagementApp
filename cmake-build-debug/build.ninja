@@ -89,6 +89,14 @@ build CMakeFiles/TaskManagement.dir/repository/CSVTaskRepository.cpp.o: CXX_COMP
   OBJECT_DIR = CMakeFiles/TaskManagement.dir
   OBJECT_FILE_DIR = CMakeFiles/TaskManagement.dir/repository
 
+build CMakeFiles/TaskManagement.dir/repository/JSONTaskRepository.cpp.o: CXX_COMPILER__TaskManagement_unscanned_Debug /Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/repository/JSONTaskRepository.cpp || cmake_object_order_depends_target_TaskManagement
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
+  DEP_FILE = CMakeFiles/TaskManagement.dir/repository/JSONTaskRepository.cpp.o.d
+  FLAGS = -g -std=gnu++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.4.sdk -fcolor-diagnostics
+  INCLUDES = -I/Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/cmake-build-debug/TaskManagement_autogen/include -isystem /Users/daviddruja/Qt/6.9.0/macos/lib/QtWidgets.framework/Headers -iframework /Users/daviddruja/Qt/6.9.0/macos/lib -isystem /Users/daviddruja/Qt/6.9.0/macos/lib/QtCore.framework/Headers -isystem /Users/daviddruja/Qt/6.9.0/macos/mkspecs/macx-clang -isystem /Users/daviddruja/Qt/6.9.0/macos/include -isystem /Users/daviddruja/Qt/6.9.0/macos/lib/QtGui.framework/Headers
+  OBJECT_DIR = CMakeFiles/TaskManagement.dir
+  OBJECT_FILE_DIR = CMakeFiles/TaskManagement.dir/repository
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target TaskManagement
@@ -97,7 +105,7 @@ build CMakeFiles/TaskManagement.dir/repository/CSVTaskRepository.cpp.o: CXX_COMP
 #############################################
 # Link the executable TaskManagement
 
-build TaskManagement: CXX_EXECUTABLE_LINKER__TaskManagement_Debug CMakeFiles/TaskManagement.dir/TaskManagement_autogen/mocs_compilation.cpp.o CMakeFiles/TaskManagement.dir/main.cpp.o CMakeFiles/TaskManagement.dir/controller/TaskController.cpp.o CMakeFiles/TaskManagement.dir/ui/mainwindow.cpp.o CMakeFiles/TaskManagement.dir/repository/CSVTaskRepository.cpp.o | /Users/daviddruja/Qt/6.9.0/macos/lib/QtWidgets.framework/Versions/A/QtWidgets /Users/daviddruja/Qt/6.9.0/macos/lib/QtGui.framework/Versions/A/QtGui /Users/daviddruja/Qt/6.9.0/macos/lib/QtCore.framework/Versions/A/QtCore || TaskManagement_autogen TaskManagement_autogen_timestamp_deps
+build TaskManagement: CXX_EXECUTABLE_LINKER__TaskManagement_Debug CMakeFiles/TaskManagement.dir/TaskManagement_autogen/mocs_compilation.cpp.o CMakeFiles/TaskManagement.dir/main.cpp.o CMakeFiles/TaskManagement.dir/controller/TaskController.cpp.o CMakeFiles/TaskManagement.dir/ui/mainwindow.cpp.o CMakeFiles/TaskManagement.dir/repository/CSVTaskRepository.cpp.o CMakeFiles/TaskManagement.dir/repository/JSONTaskRepository.cpp.o | /Users/daviddruja/Qt/6.9.0/macos/lib/QtWidgets.framework/Versions/A/QtWidgets /Users/daviddruja/Qt/6.9.0/macos/lib/QtGui.framework/Versions/A/QtGui /Users/daviddruja/Qt/6.9.0/macos/lib/QtCore.framework/Versions/A/QtCore || TaskManagement_autogen TaskManagement_autogen_timestamp_deps
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.4.sdk
   LINK_LIBRARIES = -Wl,-rpath,/Users/daviddruja/Qt/6.9.0/macos/lib  /Users/daviddruja/Qt/6.9.0/macos/lib/QtWidgets.framework/Versions/A/QtWidgets  /Users/daviddruja/Qt/6.9.0/macos/lib/QtGui.framework/Versions/A/QtGui  -framework AGL  -framework AppKit  -framework OpenGL  -framework ImageIO  -framework Metal  /Users/daviddruja/Qt/6.9.0/macos/lib/QtCore.framework/Versions/A/QtCore  -framework IOKit  -framework DiskArbitration  -framework UniformTypeIdentifiers
   LINK_PATH = -F/Users/daviddruja/Qt/6.9.0/macos/lib

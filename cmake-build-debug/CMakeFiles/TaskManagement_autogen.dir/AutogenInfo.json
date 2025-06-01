@@ -366,6 +366,12 @@
 			null
 		],
 		[
+			"/Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/repository/JSONTaskRepository.h",
+			"MU",
+			"V6MOHEPR4H/moc_JSONTaskRepository.cpp",
+			null
+		],
+		[
 			"/Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/repository/TaskRepository.h",
 			"MU",
 			"V6MOHEPR4H/moc_TaskRepository.cpp",
@@ -449,6 +455,11 @@
 		],
 		[
 			"/Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/repository/CSVTaskRepository.cpp",
+			"MU",
+			null
+		],
+		[
+			"/Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/repository/JSONTaskRepository.cpp",
 			"MU",
 			null
 		],

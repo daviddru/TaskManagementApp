@@ -20,6 +20,8 @@ add_executable(TaskManagement main.cpp
         ui/mainwindow.h
         repository/CSVTaskRepository.cpp
         repository/CSVTaskRepository.h
+        repository/JSONTaskRepository.cpp
+        repository/JSONTaskRepository.h
 )
 
 target_link_libraries(TaskManagement Qt6::Widgets)

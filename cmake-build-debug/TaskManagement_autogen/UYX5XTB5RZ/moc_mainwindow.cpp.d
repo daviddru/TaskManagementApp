@@ -911,6 +911,8 @@
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/stdarg.h \
   /Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/controller/TaskController.h \
   /Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/domain/Task.h \
+  /Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/repository/CSVTaskRepository.h \
+  /Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/repository/JSONTaskRepository.h \
   /Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/repository/TaskRepository.h \
   /Users/daviddruja/Qt/6.9.0/macos/lib/QtCore.framework/Versions/A/Headers/QString \
   /Users/daviddruja/Qt/6.9.0/macos/lib/QtCore.framework/Versions/A/Headers/q17memory.h \
