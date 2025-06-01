@@ -7,6 +7,7 @@
 
 #include "../repository/CSVTaskRepository.h"
 #include "../repository/JSONTaskRepository.h"
+#include "../domain/Specification.h"
 
 class TaskController {
 private:
@@ -22,6 +23,8 @@ public:
     void updateTask(int index, const QString& description);
     void toggleCompletion(int index);
     const std::vector<Task>& getAllTasks() const;
+
+    std::vector<Task> filterTasks(const Specification& spec) const;
 };
 
 

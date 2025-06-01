@@ -22,6 +22,7 @@ add_executable(TaskManagement main.cpp
         repository/CSVTaskRepository.h
         repository/JSONTaskRepository.cpp
         repository/JSONTaskRepository.h
+        domain/Specification.h
 )
 
 target_link_libraries(TaskManagement Qt6::Widgets)

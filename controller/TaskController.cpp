@@ -23,3 +23,13 @@ void TaskController::toggleCompletion(int index) {
 const std::vector<Task>& TaskController::getAllTasks() const {
     return repo.getAllTasks();
 }
+
+std::vector<Task> TaskController::filterTasks(const Specification& spec) const {
+    std::vector<Task> result;
+    for (const Task& task : repo.getAllTasks()) {
+        if (spec.isSatisfiedBy(task)) {
+            result.push_back(task);
+        }
+    }
+    return result;
+}
