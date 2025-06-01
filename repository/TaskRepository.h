@@ -9,15 +9,17 @@
 #include <vector>
 
 class TaskRepository {
-private:
-    std::vector<Task> tasks;
-
 public:
-    void addTask(const Task& task);
-    void removeTask(int index);
-    void updateTask(int index, const Task& task);
-    void toggleCompletion(int index);
-    std::vector<Task>& getAllTasks();
+    virtual void addTask(const Task& task) = 0;
+    virtual void removeTask(int index) = 0;
+    virtual void updateTask(int index, const Task& task) = 0;
+    virtual void toggleCompletion(int index) = 0;
+    virtual const std::vector<Task>& getAllTasks() const = 0;
+
+    virtual void save() const = 0;
+    virtual void load() = 0;
+
+    virtual ~TaskRepository() = default;
 };
 
 

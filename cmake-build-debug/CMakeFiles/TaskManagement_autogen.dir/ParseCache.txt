@@ -4,8 +4,10 @@
 /Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/controller/TaskController.h
 /Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/ui/mainwindow.cpp
 /Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/repository/TaskRepository.cpp
-/Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/controller/TaskController.cpp
 /Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/main.cpp
+/Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/controller/TaskController.cpp
+/Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/repository/CSVTaskRepository.h
+/Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/repository/CSVTaskRepository.cpp
 /Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/ui/mainwindow.h
  mmc:Q_OBJECT
  mdp:/Library/Developer/CommandLineTools/SDKs/MacOSX15.4.sdk/usr/include/Availability.h
@@ -920,6 +922,7 @@
  mdp:/Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/cmake-build-debug/TaskManagement_autogen/moc_predefs.h
  mdp:/Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/controller/TaskController.h
  mdp:/Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/domain/Task.h
+ mdp:/Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/repository/CSVTaskRepository.h
  mdp:/Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/repository/TaskRepository.h
  mdp:/Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/ui/mainwindow.h
  mdp:/Users/daviddruja/Qt/6.9.0/macos/lib/QtCore.framework/Versions/A/Headers/QString

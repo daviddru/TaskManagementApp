@@ -42,7 +42,7 @@ template <> constexpr inline auto MainWindow::qt_create_metaobjectdata<qt_meta_t
         "MainWindow",
         "onAddTask",
         "",
-        "onTaskDoubleClicked",
+        "onItemChanged",
         "QListWidgetItem*",
         "item",
         "onRemoveTask",
@@ -52,7 +52,7 @@ template <> constexpr inline auto MainWindow::qt_create_metaobjectdata<qt_meta_t
     QtMocHelpers::UintData qt_methods {
         // Slot 'onAddTask'
         QtMocHelpers::SlotData<void()>(1, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'onTaskDoubleClicked'
+        // Slot 'onItemChanged'
         QtMocHelpers::SlotData<void(QListWidgetItem *)>(3, 2, QMC::AccessPrivate, QMetaType::Void, {{
             { 0x80000000 | 4, 5 },
         }}),
@@ -84,7 +84,7 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
     if (_c == QMetaObject::InvokeMetaMethod) {
         switch (_id) {
         case 0: _t->onAddTask(); break;
-        case 1: _t->onTaskDoubleClicked((*reinterpret_cast< std::add_pointer_t<QListWidgetItem*>>(_a[1]))); break;
+        case 1: _t->onItemChanged((*reinterpret_cast< std::add_pointer_t<QListWidgetItem*>>(_a[1]))); break;
         case 2: _t->onRemoveTask(); break;
         case 3: _t->onUpdateTask(); break;
         default: ;

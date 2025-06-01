@@ -5,14 +5,14 @@
 #ifndef TASKCONTROLLER_H
 #define TASKCONTROLLER_H
 
-#include "../repository/TaskRepository.h"
+#include "../repository/CSVTaskRepository.h"
 
 class TaskController {
 private:
-    TaskRepository& repo;
+    CSVTaskRepository& repo;
 
 public:
-    TaskController(TaskRepository& repo) : repo(repo) {}
+    TaskController(CSVTaskRepository& repo) : repo(repo) {}
 
     void addTask(const QString& description);
     void removeTask(int index);

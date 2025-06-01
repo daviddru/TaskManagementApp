@@ -30,7 +30,7 @@ private:
 
 private slots:
     void onAddTask();
-    void onTaskDoubleClicked(QListWidgetItem* item);
+    void onItemChanged(QListWidgetItem* item);
     void onRemoveTask();
     void onUpdateTask();
 

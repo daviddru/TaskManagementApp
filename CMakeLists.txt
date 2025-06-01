@@ -13,12 +13,13 @@ find_package(Qt6 REQUIRED COMPONENTS Widgets)
 
 add_executable(TaskManagement main.cpp
         domain/Task.h
-        repository/TaskRepository.cpp
         repository/TaskRepository.h
         controller/TaskController.cpp
         controller/TaskController.h
         ui/mainwindow.cpp
         ui/mainwindow.h
+        repository/CSVTaskRepository.cpp
+        repository/CSVTaskRepository.h
 )
 
 target_link_libraries(TaskManagement Qt6::Widgets)

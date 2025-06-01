@@ -360,6 +360,12 @@
 			null
 		],
 		[
+			"/Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/repository/CSVTaskRepository.h",
+			"MU",
+			"V6MOHEPR4H/moc_CSVTaskRepository.cpp",
+			null
+		],
+		[
 			"/Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/repository/TaskRepository.h",
 			"MU",
 			"V6MOHEPR4H/moc_TaskRepository.cpp",
@@ -442,7 +448,7 @@
 			null
 		],
 		[
-			"/Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/repository/TaskRepository.cpp",
+			"/Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/repository/CSVTaskRepository.cpp",
 			"MU",
 			null
 		],

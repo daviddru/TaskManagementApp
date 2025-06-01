@@ -1,12 +1,12 @@
 #include <QApplication>
-#include "repository/taskrepository.h"
-#include "controller/taskcontroller.h"
-#include "ui/mainwindow.h"
+#include "repository/CSVTaskRepository.h"
+#include "controller/TaskController.h"
+#include "ui/MainWindow.h"
 
 int main(int argc, char *argv[]) {
     QApplication app(argc, argv);
 
-    TaskRepository repo;
+    CSVTaskRepository repo("save.csv");
     TaskController controller(repo);
     MainWindow window(controller);
 

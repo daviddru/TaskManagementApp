@@ -47,7 +47,7 @@ void MainWindow::setupUI() {
 
 void MainWindow::connectSignals() {
     connect(addButton, &QPushButton::clicked, this, &MainWindow::onAddTask);
-    connect(taskList, &QListWidget::itemDoubleClicked, this, &MainWindow::onTaskDoubleClicked);
+    connect(taskList, &QListWidget::itemChanged, this, &MainWindow::onItemChanged);
     connect(removeButton, &QPushButton::clicked, this, &MainWindow::onRemoveTask);
     connect(updateButton, &QPushButton::clicked, this, &MainWindow::onUpdateTask);
 }
@@ -61,7 +61,6 @@ void MainWindow::refreshUI() {
         QListWidgetItem* item = new QListWidgetItem(task.getDescription());
         if (task.getCompleted()) {
             item->setCheckState(Qt::Checked);
-            item->setForeground(Qt::gray);
         }
         else {
             item->setCheckState(Qt::Unchecked);
@@ -82,11 +81,16 @@ void MainWindow::onAddTask() {
     }
 }
 
-void MainWindow::onTaskDoubleClicked(QListWidgetItem* item) {
+void MainWindow::onItemChanged(QListWidgetItem* item) {
     int index = item->data(Qt::UserRole).toInt();
+    bool isChecked = item->checkState() == Qt::Checked;
 
-    controller.toggleCompletion(index);
-    refreshUI();
+    const auto& tasks = controller.getAllTasks();
+    if (index >= 0 && static_cast<size_t>(index) < tasks.size()) {
+        if (tasks[index].getCompleted() != isChecked) {
+            controller.toggleCompletion(index);
+        }
+    }
 }
 
 void MainWindow::onRemoveTask() {
