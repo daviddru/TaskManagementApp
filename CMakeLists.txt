@@ -23,6 +23,8 @@ add_executable(TaskManagement main.cpp
         repository/JSONTaskRepository.cpp
         repository/JSONTaskRepository.h
         domain/Specification.h
+        ui/FilterDialog.cpp
+        ui/FilterDialog.h
 )
 
 target_link_libraries(TaskManagement Qt6::Widgets)

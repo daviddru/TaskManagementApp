@@ -960,6 +960,8 @@ TaskManagement_autogen/timestamp: \
 	/Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/repository/JSONTaskRepository.cpp \
 	/Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/repository/JSONTaskRepository.h \
 	/Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/repository/TaskRepository.h \
+	/Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/ui/FilterDialog.cpp \
+	/Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/ui/FilterDialog.h \
 	/Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/ui/mainwindow.cpp \
 	/Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/ui/mainwindow.h \
 	/Users/daviddruja/Qt/6.9.0/macos/lib/QtCore.framework/Versions/A/Headers/QString \
@@ -1124,6 +1126,9 @@ TaskManagement_autogen/timestamp: \
 	/Users/daviddruja/Qt/6.9.0/macos/lib/QtGui.framework/Versions/A/Headers/qtransform.h \
 	/Users/daviddruja/Qt/6.9.0/macos/lib/QtGui.framework/Versions/A/Headers/qvalidator.h \
 	/Users/daviddruja/Qt/6.9.0/macos/lib/QtGui.framework/Versions/A/Headers/qwindowdefs.h \
+	/Users/daviddruja/Qt/6.9.0/macos/lib/QtWidgets.framework/Versions/A/Headers/QCheckBox \
+	/Users/daviddruja/Qt/6.9.0/macos/lib/QtWidgets.framework/Versions/A/Headers/QComboBox \
+	/Users/daviddruja/Qt/6.9.0/macos/lib/QtWidgets.framework/Versions/A/Headers/QDialog \
 	/Users/daviddruja/Qt/6.9.0/macos/lib/QtWidgets.framework/Versions/A/Headers/QLayout \
 	/Users/daviddruja/Qt/6.9.0/macos/lib/QtWidgets.framework/Versions/A/Headers/QLineEdit \
 	/Users/daviddruja/Qt/6.9.0/macos/lib/QtWidgets.framework/Versions/A/Headers/QListWidget \
@@ -1136,6 +1141,9 @@ TaskManagement_autogen/timestamp: \
 	/Users/daviddruja/Qt/6.9.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qabstractslider.h \
 	/Users/daviddruja/Qt/6.9.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qabstractspinbox.h \
 	/Users/daviddruja/Qt/6.9.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qboxlayout.h \
+	/Users/daviddruja/Qt/6.9.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qcheckbox.h \
+	/Users/daviddruja/Qt/6.9.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qcombobox.h \
+	/Users/daviddruja/Qt/6.9.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qdialog.h \
 	/Users/daviddruja/Qt/6.9.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qframe.h \
 	/Users/daviddruja/Qt/6.9.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qgridlayout.h \
 	/Users/daviddruja/Qt/6.9.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qlayout.h \

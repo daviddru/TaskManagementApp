@@ -5,6 +5,7 @@
 #include "MainWindow.h"
 #include <QDebug>
 #include <QMessageBox>
+#include "FilterDialog.h"
 
 MainWindow::MainWindow(TaskController& controller, QWidget *parent)
     : QMainWindow(parent), controller(controller) {
@@ -21,6 +22,7 @@ void MainWindow::setupUI() {
     QVBoxLayout* mainLayout = new QVBoxLayout();
     QHBoxLayout* inputLayout = new QHBoxLayout();
     QHBoxLayout* actionsLayout = new QHBoxLayout();
+    QHBoxLayout* filterLayout = new QHBoxLayout();
 
     // Widgets
     taskInput = new QLineEdit(this);
@@ -28,6 +30,8 @@ void MainWindow::setupUI() {
     taskList = new QListWidget(this);
     removeButton = new QPushButton("Remove task", this);
     updateButton = new QPushButton("Update task", this);
+    filterButton = new QPushButton("Filter", this);
+    resetFilterButton = new QPushButton("Reset filter", this);
 
     // Input Layout
     inputLayout->addWidget(taskInput);
@@ -37,9 +41,14 @@ void MainWindow::setupUI() {
     actionsLayout->addWidget(removeButton);
     actionsLayout->addWidget(updateButton);
 
+    // Filter Layout
+    filterLayout->addWidget(filterButton);
+    filterLayout->addWidget(resetFilterButton);
+
     // Main Layout
     mainLayout->addLayout(inputLayout);
     mainLayout->addLayout(actionsLayout);
+    mainLayout->addLayout(filterLayout);
     mainLayout->addWidget(taskList);
 
     central->setLayout(mainLayout);
@@ -50,25 +59,23 @@ void MainWindow::connectSignals() {
     connect(taskList, &QListWidget::itemChanged, this, &MainWindow::onItemChanged);
     connect(removeButton, &QPushButton::clicked, this, &MainWindow::onRemoveTask);
     connect(updateButton, &QPushButton::clicked, this, &MainWindow::onUpdateTask);
+    connect(filterButton, &QPushButton::clicked, this, &MainWindow::onFilterTasks);
+    connect(resetFilterButton, &QPushButton::clicked, this, &MainWindow::onResetFilter);
 }
 
 void MainWindow::refreshUI() {
     taskList->clear();
-    const auto& tasks = controller.getAllTasks();
+    const auto& tasks = isFiltered ? filteredTasks : controller.getAllTasks();
 
     for (size_t i = 0; i < tasks.size(); ++i) {
         const auto& task = tasks[i];
         QListWidgetItem* item = new QListWidgetItem(task.getDescription());
-        if (task.getCompleted()) {
-            item->setCheckState(Qt::Checked);
-        }
-        else {
-            item->setCheckState(Qt::Unchecked);
-        }
+        item->setCheckState(task.getCompleted() ? Qt::Checked : Qt::Unchecked);
         item->setData(Qt::UserRole, static_cast<int>(i));
         taskList->addItem(item);
     }
-    qDebug() << "Total tasks:" << tasks.size();
+
+    qDebug() << "Displayed tasks:" << tasks.size();
 }
 
 void MainWindow::onAddTask() {
@@ -119,4 +126,51 @@ void MainWindow::onUpdateTask() {
         taskInput->clear();
         refreshUI();
     }
+}
+
+void MainWindow::onFilterTasks() {
+    FilterDialog dialog(this);
+    if (dialog.exec() == QDialog::Accepted) {
+        auto keyword = dialog.getKeyword();
+        bool useCompletion = dialog.isCompletionChecked();
+        bool isAnd = dialog.isAndCondition();
+
+        Specification* keywordSpec = nullptr;
+        Specification* completionSpec = nullptr;
+
+        if (!keyword.isEmpty())
+            keywordSpec = new DescriptionContainsSpecification(keyword);
+
+        if (useCompletion)
+            completionSpec = new CompletionSpecification(true);
+
+        Specification* finalSpec = nullptr;
+        if (keywordSpec && completionSpec) {
+            if (isAnd)
+                finalSpec = new AndSpecification(*keywordSpec, *completionSpec);
+            else
+                finalSpec = new OrSpecification(*keywordSpec, *completionSpec);
+        } else if (keywordSpec) {
+            finalSpec = keywordSpec;
+        } else if (completionSpec) {
+            finalSpec = completionSpec;
+        }
+
+        if (finalSpec) {
+            filteredTasks = controller.filterTasks(*finalSpec);
+            isFiltered = true;
+            refreshUI();
+        }
+
+        delete keywordSpec;
+        delete completionSpec;
+        if (finalSpec != keywordSpec && finalSpec != completionSpec) {
+            delete finalSpec;
+        }
+    }
+}
+
+void MainWindow::onResetFilter() {
+    isFiltered = false;
+    refreshUI();
 }

@@ -23,6 +23,11 @@ private:
     QListWidget* taskList;
     QPushButton* removeButton;
     QPushButton* updateButton;
+    QPushButton* filterButton;
+    QPushButton* resetFilterButton;
+
+    std::vector<Task> filteredTasks;
+    bool isFiltered;
 
     void setupUI();
     void connectSignals();
@@ -33,6 +38,8 @@ private slots:
     void onItemChanged(QListWidgetItem* item);
     void onRemoveTask();
     void onUpdateTask();
+    void onFilterTasks();
+    void onResetFilter();
 
 public:
     MainWindow(TaskController& controller, QWidget* parent = nullptr);
