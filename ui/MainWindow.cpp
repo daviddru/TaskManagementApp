@@ -30,8 +30,9 @@ void MainWindow::setupUI() {
     taskList = new QListWidget(this);
     removeButton = new QPushButton("Remove task", this);
     updateButton = new QPushButton("Update task", this);
-    filterButton = new QPushButton("Filter", this);
+    filterButton = new QPushButton("Advanced Filter", this);
     resetFilterButton = new QPushButton("Reset filter", this);
+    showUncompletedButton = new QPushButton("Show uncompleted", this);
 
     // Input Layout
     inputLayout->addWidget(taskInput);
@@ -42,6 +43,7 @@ void MainWindow::setupUI() {
     actionsLayout->addWidget(updateButton);
 
     // Filter Layout
+    filterLayout->addWidget(showUncompletedButton);
     filterLayout->addWidget(filterButton);
     filterLayout->addWidget(resetFilterButton);
 
@@ -61,6 +63,7 @@ void MainWindow::connectSignals() {
     connect(updateButton, &QPushButton::clicked, this, &MainWindow::onUpdateTask);
     connect(filterButton, &QPushButton::clicked, this, &MainWindow::onFilterTasks);
     connect(resetFilterButton, &QPushButton::clicked, this, &MainWindow::onResetFilter);
+    connect(showUncompletedButton, &QPushButton::clicked, this, &MainWindow::onShowUncompleted);
 }
 
 void MainWindow::refreshUI() {
@@ -173,4 +176,12 @@ void MainWindow::onFilterTasks() {
 void MainWindow::onResetFilter() {
     isFiltered = false;
     refreshUI();
+}
+
+void MainWindow::onShowUncompleted() {
+    Specification* spec = new CompletionSpecification(false);  // false = not completed
+    filteredTasks = controller.filterTasks(*spec);
+    isFiltered = true;
+    refreshUI();
+    delete spec;
 }
