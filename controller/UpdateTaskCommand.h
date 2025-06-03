@@ -14,8 +14,8 @@ class UpdateTaskCommand : public Command {
 private:
     TaskController& controller;
     int index;
-    Task newTask;
     Task oldTask;
+    Task newTask;
 
 public:
     UpdateTaskCommand(TaskController& controller, int index, const QString& newDescription)
