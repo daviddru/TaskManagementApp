@@ -3,6 +3,7 @@
 #include "repository/JSONTaskRepository.h"
 #include "controller/TaskController.h"
 #include "ui/MainWindow.h"
+#include "tests/test.h"
 
 int main(int argc, char *argv[]) {
     QApplication app(argc, argv);
@@ -18,6 +19,9 @@ int main(int argc, char *argv[]) {
     window.setWindowTitle("Task Management App");
     window.resize(400,300);
     window.show();
+
+    // UNCOMMENT FOR TESTS AT LAUNCH
+    // testAll();
 
     return app.exec();
 }

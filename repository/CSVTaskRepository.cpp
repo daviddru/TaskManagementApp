@@ -5,6 +5,7 @@
 #include "CSVTaskRepository.h"
 #include <QFile>
 #include <QTextStream>
+#include <exception>
 
 CSVTaskRepository::CSVTaskRepository(const QString filePath) {
     this->filePath = filePath;
@@ -21,6 +22,7 @@ void CSVTaskRepository::removeTask(int index) {
         tasks.erase(tasks.begin() + index);
         save();
     }
+    else throw std::exception();
 }
 
 void CSVTaskRepository::updateTask(int index, const Task &task) {
@@ -28,6 +30,7 @@ void CSVTaskRepository::updateTask(int index, const Task &task) {
         tasks[index] = task;
         save();
     }
+    else throw std::exception();
 }
 
 const std::vector<Task>& CSVTaskRepository::getAllTasks() const {
@@ -43,6 +46,7 @@ void CSVTaskRepository::toggleCompletion(int index) {
             tasks[index].setCompleted(true);
         }
     }
+    else throw std::exception();
     save();
 }
 
@@ -85,4 +89,5 @@ void CSVTaskRepository::insertTaskAt(int index, const Task& task) {
         tasks.insert(tasks.begin() + index, task);
         save();
     }
+    else throw std::exception();
 }

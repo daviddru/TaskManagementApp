@@ -11,12 +11,10 @@
 
 class TaskController {
 private:
-    JSONTaskRepository& repo;
-    // CSVTaskRepository& repo;
+    TaskRepository& repo;
 
 public:
-    TaskController(JSONTaskRepository& repo) : repo(repo) {}
-    // TaskController(CSVTaskRepository& repo) : repo(repo) {}
+    TaskController(TaskRepository& repo) : repo(repo) {}
 
     void addTask(const QString& description);
     void removeTask(int index);

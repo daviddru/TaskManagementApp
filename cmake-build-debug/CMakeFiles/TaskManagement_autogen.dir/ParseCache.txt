@@ -2228,4 +2228,6 @@
 /Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/ui/mainwindow.cpp
 /Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/repository/CSVTaskRepository.h
 /Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/repository/CSVTaskRepository.cpp
+/Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/tests/test.h
+/Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/tests/test.cpp
 /Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/controller/TaskController.h

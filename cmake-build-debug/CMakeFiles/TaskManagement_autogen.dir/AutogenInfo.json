@@ -414,6 +414,12 @@
 			null
 		],
 		[
+			"/Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/tests/test.h",
+			"MU",
+			"KRHXW7JQHD/moc_test.cpp",
+			null
+		],
+		[
 			"/Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/ui/FilterDialog.h",
 			"MU",
 			"UYX5XTB5RZ/moc_FilterDialog.cpp",
@@ -502,6 +508,11 @@
 		],
 		[
 			"/Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/repository/JSONTaskRepository.cpp",
+			"MU",
+			null
+		],
+		[
+			"/Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/tests/test.cpp",
 			"MU",
 			null
 		],

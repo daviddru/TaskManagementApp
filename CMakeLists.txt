@@ -30,6 +30,8 @@ add_executable(TaskManagement main.cpp
         controller/CommandManager.h
         controller/RemoveTaskCommand.h
         controller/UpdateTaskCommand.h
+        tests/test.cpp
+        tests/test.h
 )
 
 target_link_libraries(TaskManagement Qt6::Widgets)

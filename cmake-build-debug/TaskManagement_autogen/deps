@@ -965,6 +965,8 @@ TaskManagement_autogen/timestamp: \
 	/Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/repository/JSONTaskRepository.cpp \
 	/Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/repository/JSONTaskRepository.h \
 	/Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/repository/TaskRepository.h \
+	/Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/tests/test.cpp \
+	/Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/tests/test.h \
 	/Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/ui/FilterDialog.cpp \
 	/Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/ui/FilterDialog.h \
 	/Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/ui/mainwindow.cpp \

@@ -8,6 +8,7 @@
 #include <QJsonObject>
 #include <QJsonArray>
 #include <QTextStream>
+#include <exception>
 
 JSONTaskRepository::JSONTaskRepository(const QString& filePath)
     : filePath(filePath) {
@@ -24,6 +25,7 @@ void JSONTaskRepository::removeTask(int index) {
         tasks.erase(tasks.begin() + index);
         save();
     }
+    else throw std::exception();
 }
 
 void JSONTaskRepository::updateTask(int index, const Task& task) {
@@ -31,6 +33,7 @@ void JSONTaskRepository::updateTask(int index, const Task& task) {
         tasks[index] = task;
         save();
     }
+    else throw std::exception();
 }
 
 void JSONTaskRepository::toggleCompletion(int index) {
@@ -42,6 +45,7 @@ void JSONTaskRepository::toggleCompletion(int index) {
             tasks[index].setCompleted(true);
         }
     }
+    else throw std::exception();
     save();
 }
 
@@ -95,4 +99,5 @@ void JSONTaskRepository::insertTaskAt(int index, const Task& task) {
         tasks.insert(tasks.begin() + index, task);
         save();
     }
+    else throw std::exception();
 }
