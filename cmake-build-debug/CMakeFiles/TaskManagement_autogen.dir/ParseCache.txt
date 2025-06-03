@@ -6,6 +6,7 @@
 /Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/repository/TaskRepository.cpp
 /Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/ui/FilterDialog.cpp
 /Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/controller/TaskController.cpp
+/Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/controller/RemoveTaskCommand.h
 /Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/controller/AddTaskCommand.h
 /Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/main.cpp
 /Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/ui/FilterDialog.h
@@ -1108,7 +1109,7 @@
 /Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/repository/TaskRepository.h
 /Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/repository/JSONTaskRepository.h
 /Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/repository/JSONTaskRepository.cpp
-/Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/domain/Task.h
+/Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/domain/Specification.h
 /Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/ui/mainwindow.h
  mmc:Q_OBJECT
  mdp:/Library/Developer/CommandLineTools/SDKs/MacOSX15.4.sdk/usr/include/Availability.h
@@ -2224,6 +2225,6 @@
  mdp:/Users/daviddruja/Qt/6.9.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qtwidgetsexports.h
  mdp:/Users/daviddruja/Qt/6.9.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qtwidgetsglobal.h
  mdp:/Users/daviddruja/Qt/6.9.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qwidget.h
-/Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/domain/Specification.h
+/Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/domain/Task.h
 /Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/controller/CommandManager.h
 /Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/domain/Command.h

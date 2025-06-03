@@ -14,6 +14,7 @@ public:
     virtual void removeTask(int index) = 0;
     virtual void updateTask(int index, const Task& task) = 0;
     virtual void toggleCompletion(int index) = 0;
+    virtual void insertTaskAt(int index, const Task& task) = 0;
     virtual const std::vector<Task>& getAllTasks() const = 0;
 
     virtual void save() const = 0;

@@ -79,3 +79,10 @@ void CSVTaskRepository::load() {
         }
     }
 }
+
+void CSVTaskRepository::insertTaskAt(int index, const Task& task) {
+    if (index >= 0 && index <= static_cast<int>(tasks.size())) {
+        tasks.insert(tasks.begin() + index, task);
+        save();
+    }
+}

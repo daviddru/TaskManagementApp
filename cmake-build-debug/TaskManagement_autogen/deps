@@ -952,6 +952,7 @@ TaskManagement_autogen/timestamp: \
 	/Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/cmake-build-debug/TaskManagement_autogen/moc_predefs.h \
 	/Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/controller/AddTaskCommand.h \
 	/Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/controller/CommandManager.h \
+	/Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/controller/RemoveTaskCommand.h \
 	/Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/controller/TaskController.cpp \
 	/Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/controller/TaskController.h \
 	/Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/domain/Command.h \

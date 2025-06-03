@@ -22,6 +22,8 @@ public:
     void updateTask(int index, const Task& task) override;
     void toggleCompletion(int index) override;
     const std::vector<Task>& getAllTasks() const override;
+    void insertTaskAt(int index, const Task &task) override;
+
     void save() const override;
     void load() override;
 };

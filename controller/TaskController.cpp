@@ -20,6 +20,10 @@ void TaskController::toggleCompletion(int index) {
     repo.toggleCompletion(index);
 }
 
+void TaskController::insertTaskAt(int index, const Task& task) {
+    repo.insertTaskAt(index, task);
+}
+
 const std::vector<Task>& TaskController::getAllTasks() const {
     return repo.getAllTasks();
 }

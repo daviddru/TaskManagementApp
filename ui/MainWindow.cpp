@@ -7,6 +7,7 @@
 #include <QMessageBox>
 #include "FilterDialog.h"
 #include "../controller/AddTaskCommand.h"
+#include "../controller/RemoveTaskCommand.h"
 
 MainWindow::MainWindow(TaskController& controller, QWidget *parent)
     : QMainWindow(parent), controller(controller) {
@@ -119,7 +120,8 @@ void MainWindow::onRemoveTask() {
         return;
     }
 
-    controller.removeTask(item->data(Qt::UserRole).toInt());
+    auto cmd = std::make_shared<RemoveTaskCommand>(controller, item->data(Qt::UserRole).toInt());
+    commandManager.executeCommand(cmd);
     refreshUI();
 }
 
