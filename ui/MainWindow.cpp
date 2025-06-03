@@ -34,6 +34,8 @@ void MainWindow::setupUI() {
     filterButton = new QPushButton("Advanced Filter", this);
     resetFilterButton = new QPushButton("Reset filter", this);
     showUncompletedButton = new QPushButton("Show uncompleted", this);
+    undoButton = new QPushButton("Undo", this);
+    redoButton = new QPushButton("Redo", this);
 
     // Input Layout
     inputLayout->addWidget(taskInput);
@@ -42,6 +44,8 @@ void MainWindow::setupUI() {
     // Actions Layout
     actionsLayout->addWidget(removeButton);
     actionsLayout->addWidget(updateButton);
+    actionsLayout->addWidget(undoButton);
+    actionsLayout->addWidget(redoButton);
 
     // Filter Layout
     filterLayout->addWidget(showUncompletedButton);
@@ -65,6 +69,8 @@ void MainWindow::connectSignals() {
     connect(filterButton, &QPushButton::clicked, this, &MainWindow::onFilterTasks);
     connect(resetFilterButton, &QPushButton::clicked, this, &MainWindow::onResetFilter);
     connect(showUncompletedButton, &QPushButton::clicked, this, &MainWindow::onShowUncompleted);
+    connect(undoButton, &QPushButton::clicked, this, &MainWindow::onUndo);
+    connect(redoButton, &QPushButton::clicked, this, &MainWindow::onRedo);
 }
 
 void MainWindow::refreshUI() {
@@ -186,4 +192,22 @@ void MainWindow::onShowUncompleted() {
     isFiltered = true;
     refreshUI();
     delete spec;
+}
+
+void MainWindow::onUndo() {
+    if (commandManager.canUndo()) {
+        commandManager.undo();
+        refreshUI();
+    } else {
+        QMessageBox::information(this, "Undo", "Nothing to undo.");
+    }
+}
+
+void MainWindow::onRedo() {
+    if (commandManager.canRedo()) {
+        commandManager.redo();
+        refreshUI();
+    } else {
+        QMessageBox::information(this, "Redo", "Nothing to redo.");
+    }
 }

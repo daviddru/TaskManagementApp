@@ -28,6 +28,8 @@ private:
     QPushButton* filterButton;
     QPushButton* resetFilterButton;
     QPushButton* showUncompletedButton;
+    QPushButton* undoButton;
+    QPushButton* redoButton;
 
     std::vector<Task> filteredTasks;
     bool isFiltered;
@@ -44,6 +46,8 @@ private slots:
     void onFilterTasks();
     void onResetFilter();
     void onShowUncompleted();
+    void onUndo();
+    void onRedo();
 
 public:
     MainWindow(TaskController& controller, QWidget* parent = nullptr);
