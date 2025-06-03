@@ -25,6 +25,9 @@ add_executable(TaskManagement main.cpp
         domain/Specification.h
         ui/FilterDialog.cpp
         ui/FilterDialog.h
+        domain/Command.h
+        controller/AddTaskCommand.h
+        controller/CommandManager.h
 )
 
 target_link_libraries(TaskManagement Qt6::Widgets)

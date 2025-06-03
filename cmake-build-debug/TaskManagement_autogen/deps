@@ -950,8 +950,11 @@ TaskManagement_autogen/timestamp: \
 	/Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/cmake-build-debug/CMakeFiles/3.30.5/CMakeCXXCompiler.cmake \
 	/Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/cmake-build-debug/CMakeFiles/3.30.5/CMakeSystem.cmake \
 	/Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/cmake-build-debug/TaskManagement_autogen/moc_predefs.h \
+	/Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/controller/AddTaskCommand.h \
+	/Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/controller/CommandManager.h \
 	/Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/controller/TaskController.cpp \
 	/Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/controller/TaskController.h \
+	/Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/domain/Command.h \
 	/Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/domain/Specification.h \
 	/Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/domain/Task.h \
 	/Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/main.cpp \

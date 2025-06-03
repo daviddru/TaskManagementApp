@@ -909,7 +909,9 @@
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/__stdarg_va_list.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/limits.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/stdarg.h \
+  /Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/controller/CommandManager.h \
   /Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/controller/TaskController.h \
+  /Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/domain/Command.h \
   /Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/domain/Specification.h \
   /Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/domain/Task.h \
   /Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/repository/CSVTaskRepository.h \

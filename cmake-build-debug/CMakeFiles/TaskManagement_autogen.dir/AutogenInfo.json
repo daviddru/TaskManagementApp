@@ -348,9 +348,27 @@
 	"HEADERS" : 
 	[
 		[
+			"/Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/controller/AddTaskCommand.h",
+			"MU",
+			"NPUKSKGWT2/moc_AddTaskCommand.cpp",
+			null
+		],
+		[
+			"/Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/controller/CommandManager.h",
+			"MU",
+			"NPUKSKGWT2/moc_CommandManager.cpp",
+			null
+		],
+		[
 			"/Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/controller/TaskController.h",
 			"MU",
 			"NPUKSKGWT2/moc_TaskController.cpp",
+			null
+		],
+		[
+			"/Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/domain/Command.h",
+			"MU",
+			"ZIYP446TXO/moc_Command.cpp",
 			null
 		],
 		[

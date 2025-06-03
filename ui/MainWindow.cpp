@@ -6,6 +6,7 @@
 #include <QDebug>
 #include <QMessageBox>
 #include "FilterDialog.h"
+#include "../controller/AddTaskCommand.h"
 
 MainWindow::MainWindow(TaskController& controller, QWidget *parent)
     : QMainWindow(parent), controller(controller) {
@@ -85,7 +86,8 @@ void MainWindow::onAddTask() {
     QString text = taskInput->text();
     if (!text.isEmpty()) {
         qDebug() << "Adding task: " << text;
-        controller.addTask(text);
+        auto cmd = std::make_shared<AddTaskCommand>(controller, text);
+        commandManager.executeCommand(cmd);
         taskInput->clear();
         refreshUI();
     }

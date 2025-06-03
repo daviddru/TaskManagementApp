@@ -5,6 +5,7 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+#include "../controller/CommandManager.h"
 #include "../controller/TaskController.h"
 #include <QMainWindow>
 #include <QLineEdit>
@@ -17,6 +18,7 @@ class MainWindow : public QMainWindow {
 
 private:
     TaskController& controller;
+    CommandManager commandManager;
 
     QLineEdit* taskInput;
     QPushButton* addButton;
