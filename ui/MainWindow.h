@@ -36,7 +36,7 @@ private:
 
     void setupUI();
     void connectSignals();
-    void refreshUI();
+    void refreshUI() const;
 
 private slots:
     void onAddTask();

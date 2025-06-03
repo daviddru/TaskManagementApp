@@ -8,6 +8,7 @@
 #include "FilterDialog.h"
 #include "../controller/AddTaskCommand.h"
 #include "../controller/RemoveTaskCommand.h"
+#include "../controller/UpdateTaskCommand.h"
 
 MainWindow::MainWindow(TaskController& controller, QWidget *parent)
     : QMainWindow(parent), controller(controller) {
@@ -74,7 +75,7 @@ void MainWindow::connectSignals() {
     connect(redoButton, &QPushButton::clicked, this, &MainWindow::onRedo);
 }
 
-void MainWindow::refreshUI() {
+void MainWindow::refreshUI() const {
     taskList->clear();
     const auto& tasks = isFiltered ? filteredTasks : controller.getAllTasks();
 
@@ -85,14 +86,11 @@ void MainWindow::refreshUI() {
         item->setData(Qt::UserRole, static_cast<int>(i));
         taskList->addItem(item);
     }
-
-    qDebug() << "Displayed tasks:" << tasks.size();
 }
 
 void MainWindow::onAddTask() {
     QString text = taskInput->text();
     if (!text.isEmpty()) {
-        qDebug() << "Adding task: " << text;
         auto cmd = std::make_shared<AddTaskCommand>(controller, text);
         commandManager.executeCommand(cmd);
         taskInput->clear();
@@ -135,7 +133,8 @@ void MainWindow::onUpdateTask() {
 
     QString text = taskInput->text();
     if (!text.isEmpty()) {
-        controller.updateTask(item->data(Qt::UserRole).toInt(), text);
+        auto cmd = std::make_shared<UpdateTaskCommand>(controller, item->data(Qt::UserRole).toInt(), text);
+        commandManager.executeCommand(cmd);
         taskInput->clear();
         refreshUI();
     }

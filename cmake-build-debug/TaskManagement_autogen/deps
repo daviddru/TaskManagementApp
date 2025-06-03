@@ -955,6 +955,7 @@ TaskManagement_autogen/timestamp: \
 	/Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/controller/RemoveTaskCommand.h \
 	/Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/controller/TaskController.cpp \
 	/Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/controller/TaskController.h \
+	/Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/controller/UpdateTaskCommand.h \
 	/Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/domain/Command.h \
 	/Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/domain/Specification.h \
 	/Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/domain/Task.h \

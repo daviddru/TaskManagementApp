@@ -372,6 +372,12 @@
 			null
 		],
 		[
+			"/Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/controller/UpdateTaskCommand.h",
+			"MU",
+			"NPUKSKGWT2/moc_UpdateTaskCommand.cpp",
+			null
+		],
+		[
 			"/Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/domain/Command.h",
 			"MU",
 			"ZIYP446TXO/moc_Command.cpp",
