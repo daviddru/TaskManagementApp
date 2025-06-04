@@ -5,6 +5,7 @@
 #include "MainWindow.h"
 #include <QDebug>
 #include <QMessageBox>
+#include <QGraphicsBlurEffect>
 #include "FilterDialog.h"
 #include "../controller/AddTaskCommand.h"
 #include "../controller/RemoveTaskCommand.h"

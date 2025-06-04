@@ -17,7 +17,7 @@ int main(int argc, char *argv[]) {
     MainWindow window(controller);
 
     window.setWindowTitle("Task Management App");
-    window.resize(400,300);
+    window.resize(550,450);
     window.show();
 
     // UNCOMMENT FOR TESTS AT LAUNCH
