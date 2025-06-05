@@ -86,6 +86,9 @@ void MainWindow::connectSignals() {
 
     QShortcut* redoShortcut2 = new QShortcut(QKeySequence(Qt::CTRL + Qt::Key_Y), this);
     connect(redoShortcut2, &QShortcut::activated, this, &MainWindow::onRedo);
+
+    QShortcut* addShortcut = new QShortcut(QKeySequence(Qt::Key_Return), this);
+    connect(addShortcut, &QShortcut::activated, this, &MainWindow::onAddTask);
 }
 
 void MainWindow::refreshUI() const {
