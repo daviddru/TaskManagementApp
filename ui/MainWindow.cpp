@@ -10,6 +10,8 @@
 #include "../controller/AddTaskCommand.h"
 #include "../controller/RemoveTaskCommand.h"
 #include "../controller/UpdateTaskCommand.h"
+#include <QShortcut>
+#include <QKeySequence>
 
 MainWindow::MainWindow(TaskController& controller, QWidget *parent)
     : QMainWindow(parent), controller(controller) {
@@ -74,6 +76,16 @@ void MainWindow::connectSignals() {
     connect(showUncompletedButton, &QPushButton::clicked, this, &MainWindow::onShowUncompleted);
     connect(undoButton, &QPushButton::clicked, this, &MainWindow::onUndo);
     connect(redoButton, &QPushButton::clicked, this, &MainWindow::onRedo);
+
+    // Keyboard shortcuts
+    QShortcut* undoShortcut = new QShortcut(QKeySequence::Undo, this);
+    connect(undoShortcut, &QShortcut::activated, this, &MainWindow::onUndo);
+
+    QShortcut* redoShortcut1 = new QShortcut(QKeySequence::Redo, this);
+    connect(redoShortcut1, &QShortcut::activated, this, &MainWindow::onRedo);
+
+    QShortcut* redoShortcut2 = new QShortcut(QKeySequence(Qt::CTRL + Qt::Key_Y), this);
+    connect(redoShortcut2, &QShortcut::activated, this, &MainWindow::onRedo);
 }
 
 void MainWindow::refreshUI() const {
