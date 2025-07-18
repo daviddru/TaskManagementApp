@@ -1,4 +1,23 @@
-/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/Applications/CLion.app/Contents/bin/ninja/mac/aarch64/ninja -G Ninja -S /Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement -B /Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/cmake-build-debug
--- Configuring done (0.1s)
--- Generating done (0.1s)
--- Build files have been written to: /Users/daviddruja/Documents/Facultate/OOP/Project/TaskManagement/cmake-build-debug
+"C:\Program Files\JetBrains\CLion 2025.1.3\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=C:/Program Files/JetBrains/CLion 2025.1.3/bin/ninja/win/x64/ninja.exe" -G Ninja -S D:\projects\Programe\TaskManagementApp\TaskManagementApp -B D:\projects\Programe\TaskManagementApp\TaskManagementApp\cmake-build-debug
+-- The C compiler identification is GNU 13.1.0
+-- The CXX compiler identification is GNU 13.1.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: C:/Program Files/JetBrains/CLion 2025.1.3/bin/mingw/bin/gcc.exe - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: C:/Program Files/JetBrains/CLion 2025.1.3/bin/mingw/bin/g++.exe - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE
+-- Performing Test HAVE_STDATOMIC
+-- Performing Test HAVE_STDATOMIC - Success
+-- Found WrapAtomic: TRUE
+-- Could NOT find WrapVulkanHeaders (missing: Vulkan_INCLUDE_DIR) 
+-- Configuring done (8.9s)
+-- Generating done (2.4s)
+-- Build files have been written to: D:/projects/Programe/TaskManagementApp/TaskManagementApp/cmake-build-debug
