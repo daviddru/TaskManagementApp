@@ -1,5 +1,0 @@
-D:/projects/Programe/TaskManagementApp/TaskManagementApp/cmake-build-debug/CMakeFiles/TaskManagement.dir
-D:/projects/Programe/TaskManagementApp/TaskManagementApp/cmake-build-debug/CMakeFiles/edit_cache.dir
-D:/projects/Programe/TaskManagementApp/TaskManagementApp/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-D:/projects/Programe/TaskManagementApp/TaskManagementApp/cmake-build-debug/CMakeFiles/TaskManagement_autogen_timestamp_deps.dir
-D:/projects/Programe/TaskManagementApp/TaskManagementApp/cmake-build-debug/CMakeFiles/TaskManagement_autogen.dir

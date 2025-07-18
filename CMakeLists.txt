@@ -5,7 +5,7 @@ set(CMAKE_CXX_STANDARD 20)
 
 # Platform-specific Qt path
 if (APPLE)
-    set(CMAKE_PREFIX_PATH "C:/Users/daviddruja/Qt/6.9.0/macos")
+    set(CMAKE_PREFIX_PATH "/Users/daviddruja/Qt/6.9.0/macos")
 elseif (WIN32)
     set(CMAKE_PREFIX_PATH "D:/Qt/6.9.1/mingw_64")
 endif()
