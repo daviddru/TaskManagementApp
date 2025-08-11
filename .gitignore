@@ -1,12 +1,46 @@
-CMakeLists.txt.user
+# Build output directory
+cmake-build-debug/
+cmake-build-release/
+build/
+
+# Qt auto-generated files
+TaskManagement_autogen/
+
+# Qt creator specific files (if used)
+*.user
+*.user.*
+*.pro.user
+
+# CMake generated files
 CMakeCache.txt
-CMakeFiles
-CMakeScripts
-Testing
+CMakeFiles/
 Makefile
 cmake_install.cmake
-install_manifest.txt
-compile_commands.json
-CTestTestfile.cmake
-_deps
-CMakeUserPresets.json
+
+# Qt moc, uic, rcc generated files (usually in autogen, but just in case)
+moc_*.cpp
+ui_*.h
+qrc_*.cpp
+
+# Object and executable files
+*.o
+*.obj
+*.exe
+*.dll
+*.lib
+*.so
+*.pdb
+
+# Backup and temp files
+*~
+*.swp
+*.bak
+*.tmp
+
+# Ignore save files or app data if you don't want to commit user data
+save.json
+
+# OS files
+.DS_Store
+Thumbs.db
+

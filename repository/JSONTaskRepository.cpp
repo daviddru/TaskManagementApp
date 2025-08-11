@@ -64,7 +64,7 @@ void JSONTaskRepository::save() const {
 
     QJsonDocument taskDocument(taskArray);
     QFile file(filePath);
-    if (file.open(QIODevice::WriteOnly) | QIODevice::Truncate) {
+    if (file.open(QIODevice::WriteOnly | QIODevice::Truncate)) {
         file.write(taskDocument.toJson());
         file.close();
     }

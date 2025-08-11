@@ -32,7 +32,7 @@ private:
     QPushButton* redoButton;
 
     std::vector<Task> filteredTasks;
-    bool isFiltered;
+    bool isFiltered = false;
 
     void setupUI();
     void connectSignals();

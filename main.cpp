@@ -11,7 +11,8 @@ int main(int argc, char *argv[]) {
     // CSVTaskRepository csvRepo("save.csv");
     // TaskController controller(csvRepo);
 
-    JSONTaskRepository jsonRepo("save.json");
+    QString savePath = QCoreApplication::applicationDirPath() + "/save.json";
+    JSONTaskRepository jsonRepo(savePath);
     TaskController controller(jsonRepo);
 
     MainWindow window(controller);
