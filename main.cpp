@@ -7,6 +7,7 @@
 
 int main(int argc, char *argv[]) {
     QApplication app(argc, argv);
+    app.setWindowIcon(QIcon(":/icons/resources/icon.png"));
 
     // CSVTaskRepository csvRepo("save.csv");
     // TaskController controller(csvRepo);

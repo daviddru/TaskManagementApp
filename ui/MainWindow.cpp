@@ -64,6 +64,91 @@ void MainWindow::setupUI() {
     mainLayout->addWidget(taskList);
 
     central->setLayout(mainLayout);
+
+    QString modernDarkStyle = R"(
+    QWidget {
+        background-color: #1E1E1E;
+        font-family: -apple-system, 'Helvetica Neue', sans-serif;
+        font-size: 14px;
+        color: #EAEAEA;
+    }
+
+    /* Input Fields */
+    QLineEdit {
+        background-color: #2B2B2B;
+        border: 1px solid #3C3C3C;
+        border-radius: 8px;
+        padding: 6px 10px;
+        selection-background-color: #007AFF;
+        selection-color: white;
+    }
+    QLineEdit:focus {
+        border: 1px solid #007AFF;
+    }
+
+    /* Buttons */
+    QPushButton {
+        background-color: #2D2D2D;
+        border: 1px solid #3C3C3C;
+        border-radius: 8px;
+        padding: 6px 14px;
+        color: #EAEAEA;
+        font-weight: 500;
+    }
+    QPushButton:hover {
+        background-color: #3C3C3C;
+    }
+    QPushButton:pressed {
+        background-color: #4A4A4A;
+    }
+    QPushButton:disabled {
+        background-color: #2D2D2D;
+        color: #666;
+        border: 1px solid #2D2D2D;
+    }
+
+    /* Task List */
+    QListWidget {
+        background-color: #252525;
+        border: 1px solid #3C3C3C;
+        border-radius: 8px;
+        padding: 4px;
+    }
+    QListWidget::item {
+        padding: 6px;
+        border-bottom: 1px solid #333;
+    }
+    QListWidget::item:selected {
+        background-color: #007AFF;
+        color: white;
+    }
+
+    /* Scrollbar */
+    QScrollBar:vertical {
+        border: none;
+        background: #1E1E1E;
+        width: 10px;
+        margin: 0px;
+    }
+    QScrollBar::handle:vertical {
+        background: #555;
+        border-radius: 5px;
+    }
+    QScrollBar::handle:vertical:hover {
+        background: #777;
+    }
+    QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+        height: 0px;
+    }
+
+    /* Message Boxes */
+    QMessageBox {
+        background-color: #1E1E1E;
+        color: #EAEAEA;
+    }
+)";
+    this->setStyleSheet(modernDarkStyle);
+
 }
 
 void MainWindow::connectSignals() {

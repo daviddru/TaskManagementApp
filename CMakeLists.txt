@@ -43,5 +43,10 @@ add_executable(TaskManagement
     tests/test.h
 )
 
+qt_add_resources(TaskManagement "app_resources"
+        PREFIX "/icons"
+        FILES resources/icon.png
+)
+
 # Link Qt libraries
 target_link_libraries(TaskManagement Qt6::Widgets)
